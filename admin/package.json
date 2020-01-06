@@ -1,0 +1,72 @@
+{
+  "name": "gaia-admin",
+  "version": "0.0.1",
+  "description": "Service for administrating a Gaia hub",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "scripts": {
+    "start": "npm run build && node lib/index.js",
+    "start-dev": "ts-node src/index.ts",
+    "build": "tsc && chmod +x lib/index.js",
+    "lint": "eslint --ext .ts ./src",
+    "test": "npm run lint && NODE_ENV=test nyc node ./test/test.ts"
+  },
+  "bin": {
+    "aladin-gaia-admin": "lib/index.js"
+  },
+  "dependencies": {
+    "ajv": "^6.9.2",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "cross-fetch": "^3.0.1",
+    "express": "^4.16.4",
+    "express-winston": "^3.1.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.16.1",
+    "@types/express-winston": "^3.0.1",
+    "@types/node": "^10.12.30",
+    "@types/tape": "^4.2.33",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-istanbul": "^5.1.1",
+    "eslint": "^5.15.1",
+    "nyc": "^13.3.0",
+    "source-map-support": "^0.5.10",
+    "tape": "^4.10.1",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.3333"
+  },
+  "nyc": {
+    "cache": false,
+    "all": true,
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "require": [
+      "ts-node/register/transpile-only",
+      "source-map-support/register"
+    ],
+    "reporter": [
+      "text",
+      "html",
+      "lcov"
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "name": "gaia-reader",
+  "version": "2.2.2",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-winston": "^3.1.0",
+    "fs-extra": "^7.0.1",
+    "node-fetch": "^2.3.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.16.1",
+    "@types/express-winston": "^3.0.1",
+    "@types/fs-extra": "^5.0.5",
+    "@types/node": "^10.12.30",
+    "@types/tape": "^4.2.33",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "eslint": "^5.15.1",
+    "fetch-mock": "^7.3.1",
+    "istanbul": "^0.4.5",
+    "nyc": "^13.3.0",
+    "proxyquire": "^2.1.0",
+    "source-map-support": "^0.5.10",
+    "supertest": "^3.4.2",
+    "tape": "^4.10.1",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3333"
+  },
+  "bin": {
+    "aladin-gaia-reader": "./lib/index.js"
+  },
+  "scripts": {
+    "start": "npm run build && node lib/index.js",
+    "start-dev": "ts-node src/index.ts",
+    "build": "tsc && chmod +x lib/index.js",
+    "lint": "eslint --ext .ts ./src",
+    "test": "npm run lint && NODE_ENV=test nyc node ./test/test.ts"
+  },
+  "nyc": {
+    "cache": false,
+    "all": true,
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "require": [
+      "ts-node/register/transpile-only",
+      "source-map-support/register"
+    ],
+    "reporter": [
+      "text",
+      "html",
+      "lcov"
+    ]
+  }
+}
