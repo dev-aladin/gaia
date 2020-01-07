@@ -11,12 +11,12 @@ The following assumes you have [Docker Installed](https://docs.docker.com/docker
 * Use Homebrew to install jq  with `brew install jq`
 
 In your working directory:
-1. clone a copy of the [gaia repo](https://github.com/ALADINIO/gaia):
+1. clone a copy of the [gaia repo](https://github.com/dev-aladin/gaia):
 ```
 $ git clone \
       -b master \
       --single-branch \
-      https://github.com/ALADINIO/gaia \
+      https://github.com/dev-aladin/gaia \
   gaia
 ```
 
@@ -70,7 +70,7 @@ Two methods exist:
 
 
 2. Use the running `admin` container to modify any config values, and also reload the hub when complete:
-  - [GitHub - Gaia Admin README.md](https://github.com/ALADINIO/gaia/blob/master/admin/README.md)
+  - [GitHub - Gaia Admin README.md](https://github.com/dev-aladin/gaia/blob/master/admin/README.md)
 
   ```
   $ export API_KEY="hello"
