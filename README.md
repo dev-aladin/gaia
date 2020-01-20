@@ -11,7 +11,7 @@ Developers who wish to _use_ the Gaia storage system should see the
 `aladinjs` APIs
 documented [here](https://github.com/dev-aladin/aladinjs/tree/master/src/storage) and [here](http://aladinjs.github.io/aladinjs/#storage).
 
-If you would like to deploy your own hub, there are instructions available [here](https://docs.aladin.org/storage/hub-operation.html)
+If you would like to deploy your own hub, there are instructions available [here](https://drive.google.com/file/d/15S1YibGRDDTIuj6eFKxJxeejzBnUHcHl/view)
 
 Instructions on setting up and configuring a Gaia Hub can be found in [this readme](https://github.com/dev-aladin/gaia/blob/master/hub/README.md).
 
