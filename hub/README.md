@@ -27,8 +27,6 @@ The Gaia hub currently supports the following drivers:
 ```
 'aws' == Amazon S3
 'azure' == Azure Blob Storage
-'disk' == Local disk (you must set up static web-hosting to point at this driver)
-'google-cloud' === Google Cloud Storage
 ```
 
 Set the driver you wish to use in your `config.json` file with the `driver` parameter. Many drivers additionally accept the `bucket` parameter, which controls the bucket name that files should be written to.
